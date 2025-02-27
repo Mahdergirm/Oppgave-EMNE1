@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>øke Tall</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: rgb(3, 0, 0);
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            }
+        .button{
+            font-size: 20px;
+            background-color: rgb(75, 36, 65);
+            margin: 2px;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+        }                     
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+
+        //model
+        let num=1;
+      
+
+        //view
+        function updateVeiw(){
+        document.getElementById("app").innerHTML=  `
+            <h1 id="showcounter">${num} </h1>
+            <div>
+            <button class="countbuttons" onclick="dobbleTall()"> Dobble click </button>
+            <button class="countbuttons" onclick="økeTall()"> Øke click </button>
+           <button class="countbuttons" onclick="resetteTall()"> Resette Tall </button>
+            </div>
+             `;
+        }
+        updateVeiw();
+        
+        //control
+
+        function dobbleTall(){
+            num+=num;
+           updateVeiw();
+            
+        }
+        function økeTall(){
+            num+=1;
+            updateVeiw();
+
+        }
+        function resetteTall(){
+            num=1;
+            updateVeiw();
+        }
+        
+    </script>
+    
+</body>
+</html>
+
+
+
+
+//*TallMoro
+
+Lag et program som starter med å vise frem tallet 1 i en div.
+Lag 3 knapper som skal gjøre følgende:
+- “doble tallet”,
+- “øke tallet med 1”,
+- ”resette tallet til 1 *//

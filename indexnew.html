@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= 10, initial-scale=1.0">
+    <title>Tekst</title>
+    <style>
+        #tekst1, #tekst2{
+            background-color: rgb(151, 60, 159);
+            width: 500px;
+            margin: 50px;
+    
+        }
+    </style>
+</head>
+<body>
+    <div id="tekst1">start tekst her!</div>
+    <div id="tekst2"> Tom!</div>
+    <button onclick="show1()"> Trek her</button>
+    <button onclick="show2()"> Trek her</button>
+    <button onclick="blankAll()">Blank begge</button> 
+    
+    <script>
+      
+        function show1(){
+            blankAll();
+            document.getElementById('tekst1').innerHTML= /*html*/ ` 
+            
+            <div> new oppdatert tekst!</div>
+            `;
+        }
+        
+        function show2(){
+            blankAll();
+            document.getElementById(`tekst2`).innerHTML= /*html*/`
+            <div> Old tekst!</div>`;
+        }
+        function blankAll(){
+            document.getElementById(`tekst1`).innerHTML= /*html*/``;
+            document.getElementById(`tekst2`).innerHTML=/*html*/``;
+        }
+    </script>
+</body>
+</html>

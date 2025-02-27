@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endrenumber</title>
+</head>
+<body>
+    <div id="output"></div>
+   
+        <script>
+        let numToShow= 0;
+
+        function showNumber(){
+            document.getElementById(`output`).innerHTML= /*html*/`
+            <h1 id="showCounter"> ${numToShow}</h1>
+            <div>
+             <button onclick="AddNumber()">Add number</button>
+             <button onclick="SubNumber()"> Sub number</button>
+             <button onclick="resetteTall()"> Reset Tall</button>
+             </div>
+             `;
+            
+            }
+            showNumber();
+        function AddNumber(){
+            numToShow== 0;
+            numToShow++;
+            showNumber();
+        }
+
+        function SubNumber(){
+            numToShow>=1;
+            numToShow= numToShow-1;
+            showNumber();
+        }
+        function resetteTall(){
+            numToShow=0;
+            numToShow=numToShow;
+            showNumber();
+        }
+
+         
+        /*var outputDiv = document.getElementById(`output`);
+        var numToShow= 0;
+           
+        function AddNumber(){
+            numToShow==0; 
+            numToShow++;
+            outputDiv.innerHTML=numToShow;
+
+        }
+        function SubNumber(){
+            numToShow>=1;
+            numToShow= numToShow-1;
+            outputDiv.innerHTML=numToShow;
+        }*/
+
+    </script>
+</body>
+</html>
