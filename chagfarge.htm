@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= 10, initial-scale=1.0">
+    <title>Bytefarge</title>
+</head>
+<body>
+    <div id="app"></div>
+    <button  onclick="showColor(`red`, 150, 200)"> Test 1</button>
+    <button  onclick="showColor(`blue`, 150, 150)">Test 2</button>
+
+    <script>
+        function showColor(color, width, height){
+            document.getElementById(`app`).innerHTML= /*HTML*/`
+            <div style="background-color:${color}; width:${width}px; height:${height}px;"></div>
+            `;
+        }
+        //function showColor2(){
+           // document.getElementById(`app`).innerHTML= /*html*/`
+            //<div style= "background-color: blue; width: 100px; height: 100px;"> </div>
+           // `;
+       // }
+    </script>
+    
+</body>
+</html>
