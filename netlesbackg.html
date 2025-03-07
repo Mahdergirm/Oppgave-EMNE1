@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1> Bytt backgroundfarge</h1>
+    <div class="colorPicker"></div>
+        <div class="colorBox" style="background-color:red;" onclick="selectColer(`red`)"></div>
+        <div class="colorBox" style="background-color: green;" onclick="selectColor (`green`)"></div>
+        <div class="colorBox" style="background-color: blue;" onclick="selectColor(`blue`)"></div>
+
+    <button class="changeBg" onclick="changeBackgrond()"> Endre backgrunn</button>
+    
+    <div class="content">
+        <div id="box" onclick="selectBox(this)"></div>
+        <div id="box" onclick="selectBox(this)"></div>
+    </div>
+    
+    <script>
+        var selectedColor= ``;
+        var selectedBox= null;
+
+       function selectColor(color){
+            document.getElementById(`colorPicker`).innerHTML=/*html*/`
+          selectedColor=color;
+          <div style="background-color:(color);></div> */
+          
+          `;
+        }
+        
+
+
+
+        
+
+    </script>
+</body>
+</html>

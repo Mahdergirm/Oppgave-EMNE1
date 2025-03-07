@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoppeklokke</title>
+    <style>
+        .watch{
+            background-color: blueviolet;
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            padding: 20px;
+        }        
+        .clockButton{
+            margin-top: 20px;
+            margin-left: 15px;
+            border-radius: 50%;
+            height: 55px;
+            width: 50px;
+        }
+        .clockDisplay{
+            background-color:aqua;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-left: 100px;
+            height: 20px;
+            width: 40px;
+        }
+        .roundsList{
+            background-color:antiquewhite;
+            border: 1px solid black;
+            margin-left: 50px;
+            height: 50px;
+            width: 90px;
+            font-size: x-small;
+        }
+    </style>
+</head>
+<body>
+    <div class="watch">
+        <button class="clockButton" onclick="startTimer()">Start Timer</button>
+        <button class="clockButton" onclick="pauseTimer()"> pause Timer</button>
+        <button class="clockButton" onclick="stopAll()"> Stopp All</button>
+       
+        <div id="app" class="clockDisplay"></div> 
+      
+        runddetider:
+        <div id="lastRound" class="roundsList"></div> <br>   
+    </div>
+    
+</body>
+<script>
+    const app= document.getElementById(`app`);
+    const roundTimer= document.getElementById(`lastRound`);
+    var suconds=0;
+    var timer;
+
+    function startTimer(){
+        setInterval(countSecound, 1000);
+    }
+    function countSecounds(){
+        app.innerHTML= Secounds;
+        secounds++;
+    }
+    function pauseTimer(){
+        roundTimer.innerHTML+= `<li>${secounds-1} sekunder</li>`;
+        clearIinerval(timer);
+        secound=0;
+    } 
+    function stopAll(){
+        location.reload()
+    }
+</script>
+</html>
