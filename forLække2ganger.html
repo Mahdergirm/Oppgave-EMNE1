@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobble Tall </title>
+    <style>
+       
+         button {         
+            font-size: 20px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <input id="textInput" type="text"/>
+    <button  onclick="printNumbers()"> Print Numbers</button>
+    <ul id="numberList"></ul>
+
+    <script>
+
+        function printNumbers(){
+            let stopValue=20;
+            for (let i = 1; i <= stopValue; i++) {              
+                document.getElementById("numberList").innerHTML +=`<li>  ${2 * i} </li>`;
+            }
+        }
+        
+
+</script>
+</body>
+</html>
