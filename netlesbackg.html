@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         
     </style>
 </head>
 <body>
     <h1> Bytt backgroundfarge</h1>
     <div class="colorPicker"></div>
-        <div class="colorBox" style="background-color:red;" onclick="selectColer(`red`)"></div>
-        <div class="colorBox" style="background-color: green;" onclick="selectColor (`green`)"></div>
-        <div class="colorBox" style="background-color: blue;" onclick="selectColor(`blue`)"></div>
+        <div class="colorBox" id="redBox" style="background-color:red;" onclick="selectColer(`redBox`)"></div>
+        <div class="colorBox" id="greenBox" style="background-color: green;" onclick="selectColor (`greenBox`)"></div>
+        <div class="colorBox" id="blueBox" style="background-color: blue;" onclick="selectColor(`blueBox`)"></div>
 
     <button class="changeBg" onclick="changeBackgrond()"> Endre backgrunn</button>
     
@@ -27,7 +28,7 @@
         var selectedBox= null;
 
        function selectColor(color){
-            document.getElementById(`colorPicker`).innerHTML=/*html*/`
+            document.getElementById(`color`).innerHTML=/*html*/`
           selectedColor=color;
           <div style="background-color:(color);></div> */
           

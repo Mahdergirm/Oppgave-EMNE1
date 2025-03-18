@@ -38,7 +38,8 @@
     </style>
 </head>
 <body>
-    <div class="watch">
+    <div class="app">
+      
         <button class="clockButton" onclick="startTimer()">Start Timer</button>
         <button class="clockButton" onclick="pauseTimer()"> pause Timer</button>
         <button class="clockButton" onclick="stopAll()"> Stopp All</button>
@@ -46,13 +47,14 @@
         <div id="app" class="clockDisplay"></div> 
       
         runddetider:
+        
         <div id="lastRound" class="roundsList"></div> <br>   
     </div>
     
 </body>
 <script>
     const app= document.getElementById(`app`);
-    const roundTimer= document.getElementById(`lastRound`);
+    const roundTimer= document.getElementById(`li`);
     var suconds=0;
     var timer;
 
@@ -64,12 +66,12 @@
         secounds++;
     }
     function pauseTimer(){
-        roundTimer.innerHTML+= `<li>${secounds-1} sekunder</li>`;
+       roundTimer.innerHTML+= `<li>${secounds-1} sekunder</li>`;
         clearIinerval(timer);
         secound=0;
     } 
     function stopAll(){
-        location.reload()
+        location.reload("app")
     }
 </script>
 </html>

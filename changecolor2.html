@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .pink{
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+        }
+        .red{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+        .blue{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pink" id="pinkBox" onclick="changeColor(`pinkBox`)"></div>
+    <div class="red" id="redBox" onclick="changeColor(`redBox`)"></div>
+    <div class="blue" id="blueBox" onclick="changeColor(`blueBox`)"></div>
+
+    
+
+    <script>
+        function changeColor(color){
+            document.getElementById(color).style.backgroundColor="green"
+        }
+    </script>
+    
+</body>
+</html>

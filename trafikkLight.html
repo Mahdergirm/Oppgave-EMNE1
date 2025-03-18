@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .traffikLight{
+            display: flex;
+            flex-direction: column;
+            width: 210px;
+            height: 700px;
+            background-color: black;
+            padding: 15px;
+            gap: 1rem;
+            justify-content: space-around;
+            border-radius: 5em;
+            align-items: center;
+        }
+        .red{
+            background-color: red;
+            opacity: 10%
+        }
+        .yellow{
+            background-color: yellow;
+            opacity: 10%
+        }
+        .green{
+            background-color: green;
+            opacity: 10%
+        }
+        .circle{
+            box-shadow: -5px 10px 20px 10px black inset;
+            height: 200px;
+            width:200px;
+            border-radius: 50%;
+        }
+        .active{
+            opacity: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <h3 style="justify-content:center;">Trafikklys</h3> ;
+
+    <div class="grid-container">
+      
+        <button class="button-red" onclick="changeRed()"></button>
+        <button class="button-yellow">Red and yellow</button>
+        <button class="button-green">green/button>
+        
+    </div>
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+        <script>
+            function changeRed(){
+               document.getElementById("button-red")+=
+               document.getElementById("red");
+            }
+            function lightTimer(){
+                setTimeout(showRed, 1000)
+            }
+            function activeGreen(){
+                showLight(`red`,`yellow`,`green`,`green`);
+                setTimeout(showYellow, 2000)
+            }
+
+            function showLight(lamp1, lamp2, lamp3){
+                document.getElementById(app).innerHTML= /*HTML*/`.
+                
+                    <div id="traficLight" onclick="show${myfunction}">
+                        <div class="light" style="background-color: ${lamp1};"></div>
+                        <div class="light" style="background-color: ${lamp1};"></div>
+                        <div class="light" style="background-color: ${lamp1};"></div>
+                    </div>
+                `;
+            }
+
+            function showRed(){
+                showLight(`green`,`yellow`,`red`,`red`);
+                setTimeout(showRedAndYellow, 1000)
+            }
+            function showRedAndYellow(){
+                showLight(`green`,`green`,`red`,`yellow`);
+                setTimeout(showGreen, 1000)
+            }
+
+            
+
+
+        </script>
+    
+</body>
+</html>
