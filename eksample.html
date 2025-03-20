@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv"></div>
+    <button onclick="creatAndShowDiv(`yellow`, `show Text`, 50, `dotted`, 5)"> Text 1</button>
+    <button onclick="creatAndShowDiv(`red`, `Hello`, 40, `solid`, 3)"> Text 2</button>
+    <button onclick="creatAndShowDiv(`green`, `Get Academy`, 30, `dashbord`, 10)"> Text 3</button>
+    
+    <script>
+        function creatAndShowDiv(color, text, fontSize, borderStyle, borderSize ){
+            document.getElementById(`mainDiv`).innerHTML=`
+            <div style= "background-color: ${color}; font-size: ${fontSize}px; border-style: ${borderStyle}; border-size:${borderSize};" > ${text} </div>
+             `;
+        }
+
+       // function creatStayle(color, fontSize, borderStayle, borderSize){
+        //    return `style= "${creatBackgroundColor(color)} ${creatFontSize(fontSize)} ${creatBorderStyle(borderStayle, borderSize)}"`
+
+        //}
+        
+    </script>
+    
+</html>                                                                
